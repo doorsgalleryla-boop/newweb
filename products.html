@@ -1,7 +1,55 @@
-<!doctype html><html lang="en"><head><!-- Modified: Doors Gallery branding, logo, favicon, and page title. -->
-    <!-- Modified: Replaced website logo and favicon with new optimized Doors Gallery logo. -->
-    <!-- Modified: Product catalog now loads from products.json with collection, model, color, price, and size filters. --><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Doors Gallery | Modern Interior Doors.</title><meta name="description" content="Shop modern interior doors by style, color, size, price, and availability. Request an estimate for European, frameless, hidden hinge, magnetic lock, and closet doors."><link rel="preconnect" href="https://source.unsplash.com"><link rel="icon" type="image/png" href="./assets/favicon.png"><link rel="apple-touch-icon" href="./assets/favicon.png"><link rel="stylesheet" href="style.css?v=nav-20260702"></head><body><header class="site-header luxury-header"><a class="brand" href="index.html" aria-label="Doors Gallery home"><img class="brand-logo" src="./assets/doors-gallery-symbol.webp" alt="Doors Gallery Logo" width="88" height="74"><span>Doors Gallery</span></a><button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false">Menu</button><nav class="site-nav" aria-label="Main navigation"><a href="index.html">Home</a><a href="products.html" aria-current="page">Doors</a><a href="about.html">About</a><a href="contact.html">Contact</a></nav>
-    <a class="header-search" href="products.html" aria-label="Search doors">
-      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6"></circle><path d="M16 16l4 4"></path></svg>
-    </a>
-    <a class="header-quote" href="contact.html">Get a Quote</a></header><main><section class="page-hero compact"><p class="eyebrow">Door collection</p><h1>Modern interior doors, filtered to fit your project.</h1><p>Browse stocked and custom-order doors with premium finishes, modern hardware, and builder-friendly sizing.</p></section><section class="collection-layout"><aside class="filters" aria-label="Product filters"><div class="filter-header"><h2>Filters</h2><button class="text-button" type="button" data-reset-filters>Reset</button></div><label>Collection<select data-filter="collection"><option value="">All collections</option></select></label><label>Model<select data-filter="model"><option value="">All models</option></select></label><label>Color<select data-filter="color"><option value="">All colors</option></select></label><label>Price range<select data-filter="price"><option value="">Any price</option><option value="0-650">Up to $650</option><option value="650-800">$650 to $800</option><option value="800-900">$800 to $900</option><option value="900-1300">$900 to $1,300</option></select></label><label>Size<select data-filter="size"><option value="">All sizes</option></select></label></aside><div class="collection-results"><div class="results-bar"><p><span data-result-count>0</span> doors shown</p><a class="btn secondary small" href="contact.html">Request Estimate</a></div><div class="product-grid" data-products-grid></div></div></section></main><footer class="site-footer"><div class="footer-brand"><img src="./assets/doors-gallery-symbol.webp" alt="Doors Gallery Logo" width="72" height="61"><span>Doors Gallery</span></div><p>Custom sizes, delivery, and installation available.</p></footer><script src="script.js?v=luxury-20260702b"></script></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Interior Doors & Pricing | Doors Gallery</title>
+  <meta name="description" content="Explore Doors Gallery Basic, Custom, and Frameless interior door collections with current full-set pricing, sizes, finishes, and hardware details.">
+  <link rel="icon" type="image/png" href="./assets/favicon.png">
+  <link rel="apple-touch-icon" href="./assets/favicon.png">
+  <link rel="stylesheet" href="style.css?v=doors-20260904">
+</head>
+<body class="doors-page">
+  <header class="site-header luxury-header">
+    <a class="brand" href="index.html" aria-label="Doors Gallery home"><img class="brand-logo" src="./assets/doors-gallery-symbol.webp" alt="Doors Gallery Logo" width="88" height="74"><span>Doors Gallery</span></a>
+    <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false">Menu</button>
+    <nav class="site-nav" aria-label="Main navigation"><a href="index.html">Home</a><a href="products.html" aria-current="page">Doors</a><a href="about.html">About</a><a href="contact.html">Contact</a></nav>
+    <a class="header-search" href="#door-search" aria-label="Search doors"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6"></circle><path d="M16 16l4 4"></path></svg></a>
+    <a class="header-quote" href="contact.html">Get a Quote</a>
+  </header>
+  <main>
+    <section class="doors-hero">
+      <div class="doors-hero-copy"><p class="eyebrow">2026 Door Collection</p><h1>Find the door that completes the room.</h1><p>European interior doors with complete-set pricing. Compare finishes, heights, and construction details without the clutter.</p><a class="btn primary" href="#catalog">Explore all doors</a></div>
+      <div class="doors-hero-visual"><img src="./assets/products/yl-d-edited.webp" alt="YL-D natural wood custom interior door" width="1000" height="1000"><div><span>Custom Collection</span><strong>80&quot; and 96&quot; heights</strong></div></div>
+    </section>
+    <section class="collection-overview" aria-label="Door collection pricing">
+      <button type="button" data-collection-jump="Basic Collection"><span>01</span><strong>Basic Collection</strong><small>Full sets from $550</small></button>
+      <button type="button" data-collection-jump="Custom Door Collection"><span>02</span><strong>Custom Collection</strong><small>$800 at 80&quot; · $1,200 at 96&quot;</small></button>
+      <button type="button" data-collection-jump="Frameless Door Collection"><span>03</span><strong>Frameless Collection</strong><small>$850 full set</small></button>
+    </section>
+    <section class="catalog-shell" id="catalog">
+      <div class="catalog-heading"><div><p class="eyebrow">Current retail collection</p><h2>Choose your finish.</h2></div><p>Every listed price is for a complete door set. Installation and upgraded custom options are available separately.</p></div>
+      <div class="catalog-tools">
+        <label class="door-search" for="door-search"><span>Search by model or finish</span><input id="door-search" type="search" placeholder="Try “LV-18” or “Golden Oak”" data-door-search></label>
+        <button class="filter-toggle" type="button" data-filter-toggle aria-expanded="false">Filters</button>
+        <div class="filter-row" data-filter-panel>
+          <label>Collection<select data-filter="collection"><option value="">All collections</option></select></label>
+          <label>Model<select data-filter="model"><option value="">All models</option></select></label>
+          <label>Finish<select data-filter="color"><option value="">All finishes</option></select></label>
+          <label>Price<select data-filter="price"><option value="">Any price</option><option value="0-600">Up to $599</option><option value="600-700">$600–$699</option><option value="700-850">$700–$849</option><option value="850-1300">$850–$1,200</option></select></label>
+          <button class="text-button" type="button" data-reset-filters>Clear all</button>
+        </div>
+      </div>
+      <div class="results-bar"><p><strong data-result-count>0</strong> doors</p><p data-active-collection>All collections</p></div>
+      <div class="product-grid catalog-grid" data-products-grid><p class="loading-state">Loading door collection…</p></div>
+    </section>
+    <section class="full-set-band">
+      <div><p class="eyebrow">Complete set</p><h2>More than a door slab.</h2></div>
+      <ul><li>Door slab and jamb</li><li>European magnetic lock</li><li>Hinges for each collection</li><li>15+ handle styles</li></ul>
+      <a class="btn light" href="contact.html">Request an Estimate</a>
+    </section>
+  </main>
+  <footer class="site-footer"><div class="footer-brand"><img src="./assets/doors-gallery-symbol.webp" alt="Doors Gallery Logo" width="72" height="61"><span>Doors Gallery</span></div><p>Custom sizes, delivery, and installation available.</p></footer>
+  <script src="script.js?v=doors-20260904"></script>
+</body>
+</html>
