@@ -142,3 +142,27 @@ body.doors-page{background:#f5f1e9;color:var(--ink)}
 @media (max-width:560px){
   .doors-hero-copy h1{font-size:48px}.doors-hero-visual{min-height:400px}.doors-hero-visual img{height:360px}.doors-hero-visual>div{right:18px;bottom:18px}.collection-overview{padding:0 16px}.collection-overview button{min-height:118px;padding:22px}.catalog-shell{padding-left:16px;padding-right:16px}.catalog-tools{grid-template-columns:1fr}.filter-toggle{width:100%}.filter-row{grid-template-columns:1fr}.catalog-grid{grid-template-columns:1fr;gap:22px}.product-image{height:420px}.catalog-heading h2,.full-set-band h2{font-size:42px}.full-set-band ul{grid-template-columns:1fr}.full-set-band .btn{width:100%}.card-title-row{grid-template-columns:1fr}.catalog-grid .card-price{text-align:left}.product-detail .main-product-image{min-height:430px;padding:20px}.product-detail .main-product-image img{height:390px}
 }
+
+/* Limited-time frameless sale. */
+.announcement-bar strong{color:#fff}
+.sale-collection{position:relative;background:linear-gradient(135deg,#20170d,#0b0b0a)!important;color:#fff!important}
+.sale-collection::after{content:"SALE";position:absolute;top:14px;right:14px;padding:5px 8px;background:var(--gold);color:#090806;font-size:10px;font-weight:900;letter-spacing:.12em}
+.sale-collection small{color:var(--gold-soft)!important}.sale-collection s{color:rgba(255,255,255,.5);margin-right:5px}
+.catalog-grid .product-card.is-sale{border-color:#c4a66e;box-shadow:0 14px 34px rgba(111,77,27,.09)}
+.catalog-grid .product-card.is-sale .product-image>span{background:#171008;color:#f1d69d}
+.sale-price{display:grid!important;gap:1px;justify-items:end;white-space:nowrap}
+.sale-price s{color:#8a8175;font-size:12px;font-weight:600}.sale-price strong{color:#9b6720;font-size:17px;font-weight:900}
+.main-product-image{position:relative}.detail-sale-badge{position:absolute;top:18px;left:18px;padding:9px 12px;background:#171008;color:#f1d69d;font-size:11px;font-weight:900;letter-spacing:.12em;text-transform:uppercase}
+.detail-copy .price.sale-price{display:flex!important;align-items:baseline;justify-content:start;gap:14px}.detail-copy .price.sale-price s{font-size:18px}.detail-copy .price.sale-price strong{font-size:32px}
+.home-sale-spotlight{display:grid;grid-template-columns:minmax(340px,.9fr) minmax(0,1.1fr);min-height:680px;background:#f2ede4;color:var(--ink)}
+.home-sale-image{position:relative;display:grid;place-items:center;padding:clamp(38px,6vw,76px);background:linear-gradient(145deg,#e8e0d4,#fbf8f2);overflow:hidden}
+.home-sale-image::before{content:"";position:absolute;inset:28px;border:1px solid rgba(84,61,31,.16)}
+.home-sale-image img{position:relative;z-index:1;width:min(72%,430px);height:560px;object-fit:contain;mix-blend-mode:multiply;filter:drop-shadow(0 28px 30px rgba(42,33,24,.2))}
+.home-sale-image>span{position:absolute;z-index:2;top:44px;left:44px;padding:8px 11px;background:#15110b;color:var(--gold-soft);font-size:11px;font-weight:900;letter-spacing:.13em;text-transform:uppercase}
+.home-sale-copy{display:flex;flex-direction:column;align-items:flex-start;justify-content:center;padding:clamp(58px,8vw,104px) max(clamp(24px,6vw,88px),calc((100vw - 1240px)/2));padding-left:clamp(38px,7vw,100px)}
+.home-sale-copy h2{margin:0 0 24px;font-family:Georgia,"Times New Roman",serif;font-size:clamp(46px,6vw,78px);font-weight:400;line-height:.96;letter-spacing:-.03em}
+.home-sale-copy>p:not(.eyebrow):not(.home-sale-price){max-width:620px;color:var(--muted);font-size:17px}
+.home-sale-price{display:flex;align-items:baseline;gap:17px;margin:0 0 22px}.home-sale-price s{color:#8d8377;font-size:24px}.home-sale-price strong{color:#98651f;font-family:Georgia,"Times New Roman",serif;font-size:58px;font-weight:400}.home-sale-price span{font-size:13px;font-weight:900;letter-spacing:.1em;text-transform:uppercase}
+.home-sale-copy .btn.primary{background:#15110b;color:#fff}.home-sale-copy .btn.secondary{border-color:#15110b;background:transparent;color:#15110b}
+@media(max-width:850px){.home-sale-spotlight{grid-template-columns:1fr}.home-sale-image{min-height:540px}.home-sale-image img{height:470px}.home-sale-copy{padding:68px 24px}}
+@media(max-width:560px){.sale-price{justify-items:start}.home-sale-image{min-height:440px;padding:38px 20px}.home-sale-image img{width:82%;height:380px}.home-sale-image>span{top:24px;left:24px}.home-sale-copy h2{font-size:48px}.home-sale-price{gap:12px}.home-sale-price strong{font-size:52px}}

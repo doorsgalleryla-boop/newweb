@@ -24,6 +24,13 @@ function escapeHtml(value = '') {
   return String(value).replace(/[&<>'"]/g, character => ({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[character]));
 }
 
+function priceMarkup(product, className = 'card-price') {
+  if (product.regularPrice) {
+    return `<p class="${className} sale-price"><s>$${Number(product.regularPrice).toLocaleString()}</s><strong>${escapeHtml(product.priceLabel)}</strong></p>`;
+  }
+  return `<p class="${className}">${escapeHtml(product.priceLabel)}</p>`;
+}
+
 async function loadProducts() {
   if (products.length) return products;
   try {
@@ -38,13 +45,14 @@ async function loadProducts() {
 
 function productCard(product) {
   const name = escapeHtml(product.name);
-  return `<article class="product-card">
+  const saleClass = product.regularPrice ? ' is-sale' : '';
+  return `<article class="product-card${saleClass}">
     <a class="product-image" href="product.html?id=${encodeURIComponent(product.id)}" aria-label="View ${name}">
       <img src="${escapeHtml(product.image)}" alt="${escapeHtml(product.model)} ${name} interior door" width="1000" height="1200" loading="lazy">
       <span>${escapeHtml(product.availability)}</span>
     </a>
     <div class="product-card-body">
-      <div class="card-title-row"><div><p class="model-code">${escapeHtml(product.model)}</p><h3>${name}</h3></div><p class="card-price">${escapeHtml(product.priceLabel)}</p></div>
+      <div class="card-title-row"><div><p class="model-code">${escapeHtml(product.model)}</p><h3>${name}</h3></div>${priceMarkup(product)}</div>
       <p class="card-description">${escapeHtml(product.description)}</p>
       <div class="card-footer"><span>${escapeHtml(product.color)}</span><a href="product.html?id=${encodeURIComponent(product.id)}">View details <span aria-hidden="true">→</span></a></div>
     </div>
@@ -83,6 +91,8 @@ async function setupCatalog() {
     if (values) values.forEach(value => select.insertAdjacentHTML('beforeend', `<option value="${escapeHtml(value)}">${escapeHtml(value)}</option>`));
     select.addEventListener('change', render);
   });
+  const requestedCollection = new URLSearchParams(location.search).get('collection');
+  if (requestedCollection && collectionSelect && optionMap.collection.includes(requestedCollection)) collectionSelect.value = requestedCollection;
   search?.addEventListener('input', render);
 
   function reset() {
@@ -138,8 +148,8 @@ async function renderDetail() {
   document.querySelector('meta[name="description"]')?.setAttribute('content', `${product.model} ${product.name}: ${product.priceLabel}. View sizes, included hardware, and request an estimate.`);
   const sizes = product.sizes.map(item => `<li>${escapeHtml(item)}</li>`).join('');
   const included = details.included.map(item => `<li>${escapeHtml(item)}</li>`).join('');
-  target.innerHTML = `<div class="gallery-shell"><div class="main-product-image"><img src="${escapeHtml(product.image)}" alt="${escapeHtml(product.model)} ${escapeHtml(product.name)} interior door" width="1000" height="1200"></div></div>
-    <div class="detail-copy"><a class="back-link" href="products.html">← All doors</a><div class="detail-kicker"><span>${escapeHtml(product.collection)}</span><span>${escapeHtml(product.model)}</span></div><h1>${escapeHtml(product.name)}</h1><p>${escapeHtml(product.description)}</p><p class="price">${escapeHtml(product.priceLabel)}</p>
+  target.innerHTML = `<div class="gallery-shell"><div class="main-product-image${product.regularPrice ? ' sale-image' : ''}"><img src="${escapeHtml(product.image)}" alt="${escapeHtml(product.model)} ${escapeHtml(product.name)} interior door" width="1000" height="1200">${product.regularPrice ? '<span class="detail-sale-badge">Frameless Sale</span>' : ''}</div></div>
+    <div class="detail-copy"><a class="back-link" href="products.html">← All doors</a><div class="detail-kicker"><span>${escapeHtml(product.collection)}</span><span>${escapeHtml(product.model)}</span></div><h1>${escapeHtml(product.name)}</h1><p>${escapeHtml(product.description)}</p>${priceMarkup(product, 'price')}
     <dl class="detail-list"><div><dt>Finish</dt><dd>${escapeHtml(product.color)}</dd></div><div><dt>Available sizes</dt><dd><ul class="size-price-list">${sizes}</ul></dd></div><div><dt>Configuration</dt><dd>${escapeHtml(details.configuration)}</dd></div></dl>
     <h3>Full set includes</h3><ul class="included-grid">${included}</ul><p class="catalog-note">${escapeHtml(details.note)}</p>
     <div class="button-row"><a class="btn primary" href="contact.html?model=${encodeURIComponent(`${product.model} ${product.name}`)}">Request Estimate</a><a class="btn secondary" href="products.html">View Collection</a></div></div>`;
