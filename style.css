@@ -166,3 +166,70 @@ body.doors-page{background:#f5f1e9;color:var(--ink)}
 .home-sale-copy .btn.primary{background:#15110b;color:#fff}.home-sale-copy .btn.secondary{border-color:#15110b;background:transparent;color:#15110b}
 @media(max-width:850px){.home-sale-spotlight{grid-template-columns:1fr}.home-sale-image{min-height:540px}.home-sale-image img{height:470px}.home-sale-copy{padding:68px 24px}}
 @media(max-width:560px){.sale-price{justify-items:start}.home-sale-image{min-height:440px;padding:38px 20px}.home-sale-image img{width:82%;height:380px}.home-sale-image>span{top:24px;left:24px}.home-sale-copy h2{font-size:48px}.home-sale-price{gap:12px}.home-sale-price strong{font-size:52px}}
+
+/* Custom closet collection. */
+.collection-card-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+body.closets-page{background:#f5f1e9;color:var(--ink)}
+.closets-page .site-footer{background:#0b0b0a;color:rgba(255,255,255,.66);border-color:rgba(255,255,255,.1)}
+.closets-page .footer-brand{color:#fff}
+.closet-hero{display:grid;grid-template-columns:minmax(0,.88fr) minmax(420px,1.12fr);min-height:700px;background:#0b0b0a;color:#fff;overflow:hidden}
+.closet-hero-copy{display:flex;flex-direction:column;align-items:flex-start;justify-content:center;padding:clamp(70px,9vw,126px) max(clamp(24px,6vw,86px),calc((100vw - 1240px)/2));padding-right:clamp(32px,6vw,90px)}
+.closet-hero-copy .eyebrow{color:var(--gold-soft)}
+.closet-hero-copy h1{max-width:700px;margin:0 0 25px;font-family:Georgia,"Times New Roman",serif;font-size:clamp(52px,7vw,96px);font-weight:400;line-height:.92;letter-spacing:-.04em;text-wrap:balance}
+.closet-hero-copy>p:not(.eyebrow){max-width:590px;margin:0;color:rgba(255,255,255,.7);font-size:clamp(17px,1.8vw,21px)}
+.closet-hero-copy .btn.primary{background:linear-gradient(135deg,#d7bd87,#9c7745);border-color:#b68c50;color:#100d09}
+.closet-hero-copy .btn.secondary{border-color:rgba(255,255,255,.38);background:transparent;color:#fff}
+.closet-hero-media{position:relative;min-height:700px;margin:0;background:#1b1813;overflow:hidden}
+.closet-hero-media::after{content:"";position:absolute;inset:28px;border:1px solid rgba(255,255,255,.14);pointer-events:none}
+.closet-hero-media img{width:100%;height:100%;min-height:700px;object-fit:cover;object-position:center}
+.closet-hero-media figcaption{position:absolute;z-index:1;right:0;bottom:0;display:grid;gap:4px;min-width:255px;padding:21px 25px;background:rgba(8,8,8,.78);border-top:1px solid rgba(255,255,255,.12);border-left:1px solid rgba(255,255,255,.12);backdrop-filter:blur(12px)}
+.closet-hero-media figcaption span{color:var(--gold-soft);font-size:11px;font-weight:800;letter-spacing:.13em;text-transform:uppercase}
+.closet-hero-media figcaption strong{font-family:Georgia,"Times New Roman",serif;font-size:24px;font-weight:400}
+.closet-intro{display:grid;grid-template-columns:minmax(0,1fr) minmax(320px,.72fr);gap:clamp(38px,8vw,110px);align-items:end;max-width:1240px;margin:0 auto;padding:clamp(78px,10vw,132px) clamp(20px,4vw,32px) clamp(56px,7vw,88px)}
+.closet-intro h2,.closet-feature h2,.closet-price-card h2,.closet-specs h2,.closet-projects h2{margin:0;font-family:Georgia,"Times New Roman",serif;font-size:clamp(42px,5vw,68px);font-weight:400;line-height:1}
+.closet-intro>p{max-width:560px;margin:0;color:var(--muted);font-size:17px}
+.closet-feature-grid{max-width:1240px;margin:0 auto;padding:0 clamp(20px,4vw,32px) clamp(88px,10vw,140px);display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.closet-feature-wide{grid-column:1/-1;display:grid;grid-template-columns:minmax(340px,.9fr) minmax(0,1.1fr);min-height:620px;background:#e7dfd3;border:1px solid #d2c6b6}
+.closet-feature figure,.closet-price-card figure{margin:0;overflow:hidden}
+.closet-feature figure{padding:42px;background:linear-gradient(145deg,#d9d0c3,#f5f0e8)}
+.closet-feature figure img{width:100%;height:100%;max-height:620px;object-fit:contain;filter:drop-shadow(0 28px 32px rgba(28,22,16,.2))}
+.closet-feature-copy{display:flex;flex-direction:column;align-items:flex-start;justify-content:center;padding:clamp(42px,7vw,92px)}
+.closet-feature-copy>p:not(.eyebrow){max-width:610px;color:var(--muted);font-size:17px}
+.closet-feature-copy ul{display:grid;gap:11px;width:100%;margin:16px 0 28px;padding:0;list-style:none}
+.closet-feature-copy li{padding:11px 0;border-bottom:1px solid rgba(88,68,43,.18);font-size:14px}
+.closet-price-card{display:grid;grid-template-rows:480px auto;background:#fff;border:1px solid #d8d0c4}
+.closet-price-card figure{padding:20px;background:linear-gradient(145deg,#e6dfd4,#f9f6f0)}
+.closet-price-card figure img{width:100%;height:100%;object-fit:contain}
+.closet-price-card>div{display:flex;flex-direction:column;align-items:flex-start;padding:clamp(32px,5vw,56px)}
+.closet-price-card h2{font-size:clamp(42px,5vw,62px)}
+.closet-price-card>div>p:not(.eyebrow):not(.closet-price){color:var(--muted)}
+.closet-price{display:flex;align-items:baseline;gap:12px;margin:20px 0 8px;color:var(--wood-dark)}
+.closet-price strong{font-family:Georgia,"Times New Roman",serif;font-size:54px;font-weight:400;line-height:1}
+.closet-price span{font-size:12px;font-weight:900;letter-spacing:.09em;text-transform:uppercase}
+.closet-price-card .btn{margin-top:auto}
+.closet-price-card-dark{background:#15130f;color:#fff;border-color:#15130f}
+.closet-price-card-dark figure{background:linear-gradient(145deg,#242018,#0b0a08)}
+.closet-price-card-dark .eyebrow,.closet-price-card-dark .closet-price{color:var(--gold-soft)}
+.closet-price-card-dark>div>p:not(.eyebrow):not(.closet-price){color:rgba(255,255,255,.65)}
+.closet-specs{display:grid;grid-template-columns:minmax(280px,.75fr) minmax(0,1.25fr);gap:clamp(45px,9vw,120px);padding:clamp(70px,9vw,116px) max(clamp(20px,5vw,64px),calc((100vw - 1180px)/2));background:#0b0b0a;color:#fff}
+.closet-specs .eyebrow{color:var(--gold-soft)}
+.closet-specs dl{display:grid;grid-template-columns:1fr 1fr;gap:0 34px;margin:0}
+.closet-specs dl div{padding:18px 0;border-top:1px solid rgba(255,255,255,.15)}
+.closet-specs dt{color:var(--gold-soft);font-size:11px;font-weight:900;letter-spacing:.12em;text-transform:uppercase}
+.closet-specs dd{margin:7px 0 0;color:rgba(255,255,255,.76);font-size:16px}
+.closet-projects{min-height:720px;padding:clamp(88px,11vw,150px) max(clamp(20px,5vw,64px),calc((100vw - 1180px)/2));background:#f5f1e9}
+.closet-projects-heading{max-width:760px}
+.closet-projects-heading>p:not(.eyebrow){max-width:600px;color:var(--muted);font-size:16px}
+.project-placeholders{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:48px}
+.project-placeholders span{min-height:290px;border:1px dashed #c8bcac;background:linear-gradient(145deg,rgba(255,255,255,.35),rgba(230,222,211,.25))}
+.closet-estimate{border-top:1px solid #d8d0c4}
+
+@media(max-width:1000px){
+  .closet-hero{grid-template-columns:1fr .86fr}.closet-feature-wide{grid-template-columns:.8fr 1.2fr}.closet-price-card{grid-template-rows:390px auto}
+}
+@media(max-width:800px){
+  .collection-card-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.closet-hero{grid-template-columns:1fr;min-height:auto}.closet-hero-media,.closet-hero-media img{min-height:540px}.closet-intro,.closet-feature-wide,.closet-specs{grid-template-columns:1fr}.closet-feature-grid{grid-template-columns:1fr}.closet-feature-wide{grid-column:auto}.closet-feature figure{max-height:580px}.closet-specs dl{grid-template-columns:1fr 1fr}.project-placeholders{grid-template-columns:1fr 1fr}.project-placeholders span:last-child{display:none}
+}
+@media(max-width:560px){
+  .collection-card-grid{grid-template-columns:1fr}.closet-hero-copy{padding:68px 20px}.closet-hero-copy h1{font-size:54px}.closet-hero-media,.closet-hero-media img{min-height:430px}.closet-hero-media figcaption{min-width:0}.closet-feature figure{padding:24px}.closet-price-card{grid-template-rows:350px auto}.closet-specs dl,.project-placeholders{grid-template-columns:1fr}.closet-projects{min-height:640px}.project-placeholders span{min-height:260px}.project-placeholders span:nth-child(n+2){display:none}.closet-price-card .btn{width:100%}
+}
