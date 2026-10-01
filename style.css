@@ -217,19 +217,22 @@ body.closets-page{background:#f5f1e9;color:var(--ink)}
 .closet-specs dl div{padding:18px 0;border-top:1px solid rgba(255,255,255,.15)}
 .closet-specs dt{color:var(--gold-soft);font-size:11px;font-weight:900;letter-spacing:.12em;text-transform:uppercase}
 .closet-specs dd{margin:7px 0 0;color:rgba(255,255,255,.76);font-size:16px}
-.closet-projects{min-height:720px;padding:clamp(88px,11vw,150px) max(clamp(20px,5vw,64px),calc((100vw - 1180px)/2));background:#f5f1e9}
+.closet-projects{padding:clamp(88px,11vw,150px) max(clamp(20px,5vw,64px),calc((100vw - 1180px)/2));background:#f5f1e9}
 .closet-projects-heading{max-width:760px}
 .closet-projects-heading>p:not(.eyebrow){max-width:600px;color:var(--muted);font-size:16px}
-.project-placeholders{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:48px}
-.project-placeholders span{min-height:290px;border:1px dashed #c8bcac;background:linear-gradient(145deg,rgba(255,255,255,.35),rgba(230,222,211,.25))}
+.completed-project-grid{columns:3 300px;column-gap:18px;margin-top:48px}
+.completed-project{display:inline-block;width:100%;margin:0 0 18px;break-inside:avoid;overflow:hidden;background:#ded6ca;border:1px solid #d4cabd;box-shadow:0 14px 34px rgba(48,38,28,.08)}
+.completed-project img{width:100%;height:auto;transition:transform .35s ease,filter .35s ease}
+.completed-project:hover img{transform:scale(1.025);filter:brightness(.94)}
+.completed-project:focus-visible{outline:3px solid var(--wood-dark);outline-offset:4px}
 .closet-estimate{border-top:1px solid #d8d0c4}
 
 @media(max-width:1000px){
   .closet-hero{grid-template-columns:1fr .86fr}.closet-feature-wide{grid-template-columns:.8fr 1.2fr}.closet-price-card{grid-template-rows:390px auto}
 }
 @media(max-width:800px){
-  .collection-card-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.closet-hero{grid-template-columns:1fr;min-height:auto}.closet-hero-media,.closet-hero-media img{min-height:540px}.closet-intro,.closet-feature-wide,.closet-specs{grid-template-columns:1fr}.closet-feature-grid{grid-template-columns:1fr}.closet-feature-wide{grid-column:auto}.closet-feature figure{max-height:580px}.closet-specs dl{grid-template-columns:1fr 1fr}.project-placeholders{grid-template-columns:1fr 1fr}.project-placeholders span:last-child{display:none}
+  .collection-card-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.closet-hero{grid-template-columns:1fr;min-height:auto}.closet-hero-media,.closet-hero-media img{min-height:540px}.closet-intro,.closet-feature-wide,.closet-specs{grid-template-columns:1fr}.closet-feature-grid{grid-template-columns:1fr}.closet-feature-wide{grid-column:auto}.closet-feature figure{max-height:580px}.closet-specs dl{grid-template-columns:1fr 1fr}.completed-project-grid{columns:2}
 }
 @media(max-width:560px){
-  .collection-card-grid{grid-template-columns:1fr}.closet-hero-copy{padding:68px 20px}.closet-hero-copy h1{font-size:54px}.closet-hero-media,.closet-hero-media img{min-height:430px}.closet-hero-media figcaption{min-width:0}.closet-feature figure{padding:24px}.closet-price-card{grid-template-rows:350px auto}.closet-specs dl,.project-placeholders{grid-template-columns:1fr}.closet-projects{min-height:640px}.project-placeholders span{min-height:260px}.project-placeholders span:nth-child(n+2){display:none}.closet-price-card .btn{width:100%}
+  .collection-card-grid{grid-template-columns:1fr}.closet-hero-copy{padding:68px 20px}.closet-hero-copy h1{font-size:54px}.closet-hero-media,.closet-hero-media img{min-height:430px}.closet-hero-media figcaption{min-width:0}.closet-feature figure{padding:24px}.closet-price-card{grid-template-rows:350px auto}.closet-specs dl{grid-template-columns:1fr}.completed-project-grid{columns:1}.closet-price-card .btn{width:100%}
 }
