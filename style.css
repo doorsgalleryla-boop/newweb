@@ -236,3 +236,22 @@ body.closets-page{background:#f5f1e9;color:var(--ink)}
 @media(max-width:560px){
   .collection-card-grid{grid-template-columns:1fr}.closet-hero-copy{padding:68px 20px}.closet-hero-copy h1{font-size:54px}.closet-hero-media,.closet-hero-media img{min-height:430px}.closet-hero-media figcaption{min-width:0}.closet-feature figure{padding:24px}.closet-price-card{grid-template-rows:350px auto}.closet-specs dl{grid-template-columns:1fr}.completed-project-grid{columns:1}.closet-price-card .btn{width:100%}
 }
+
+/* Legal pages and footer policy links */
+.footer-legal{display:flex;flex-wrap:wrap;justify-content:center;gap:10px 20px;margin-top:12px}
+.footer-legal a{color:inherit;font-size:13px;text-decoration:underline;text-underline-offset:4px;opacity:.82}
+.footer-legal a:hover,.footer-legal a:focus-visible{opacity:1}
+.form-privacy{grid-column:1/-1;margin:0;color:var(--muted);font-size:12px;line-height:1.55}
+.form-privacy a{color:inherit;text-decoration:underline;text-underline-offset:3px}
+.legal-main{background:#f5f1e9}
+.legal-hero{padding:clamp(72px,10vw,130px) max(clamp(20px,5vw,64px),calc((100vw - 980px)/2)) clamp(48px,7vw,80px);background:#12110e;color:#fff}
+.legal-hero .eyebrow{color:var(--gold-soft)}
+.legal-hero h1{max-width:840px;margin:12px 0 18px;font-family:Georgia,"Times New Roman",serif;font-size:clamp(48px,7vw,84px);font-weight:400;line-height:1}
+.legal-hero>p:last-child{margin:0;color:rgba(255,255,255,.7)}
+.legal-content{max-width:980px;margin:0 auto;padding:clamp(50px,8vw,100px) clamp(20px,5vw,64px) clamp(80px,10vw,130px);color:#2a2721}
+.legal-content>p:first-child{margin-top:0;font-size:18px;line-height:1.8}
+.legal-content section{padding:34px 0;border-top:1px solid #d8d0c4}
+.legal-content h2{margin:0 0 16px;font-family:Georgia,"Times New Roman",serif;font-size:clamp(28px,4vw,38px);font-weight:400;line-height:1.15}
+.legal-content p,.legal-content li{line-height:1.75}
+.legal-content ul{display:grid;gap:8px;padding-left:22px}
+.legal-content a{color:var(--wood-dark);font-weight:700;text-underline-offset:3px}
